@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "vcfparser/1.0.0": {
+      "VcfParser/1.0.0": {
         "dependencies": {
           "log4net": "2.0.13"
         },
         "runtime": {
-          "vcfparser.dll": {}
+          "VcfParser.dll": {}
         }
       },
       "log4net/2.0.13": {
@@ -79,7 +79,7 @@
     }
   },
   "libraries": {
-    "vcfparser/1.0.0": {
+    "VcfParser/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

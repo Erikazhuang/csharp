@@ -37,6 +37,7 @@ namespace VcfService
             get { return _fileValid; }
         }
 
+     
         //read file, load and return data in DataTable
         public DataTable GetData(){
             DataTable dt = new DataTable("data");
@@ -50,7 +51,7 @@ namespace VcfService
                     { 
                         if (line.StartsWith(_headerhint))  
                             {
-                                string[] columnNames = line.Replace(_headerhint,"").Split(_sep);
+                                string[] columnNames = line.Split(_sep);
                                 foreach(var header in columnNames)
                                 {
                                     dt.Columns.Add(header);
