@@ -4,6 +4,10 @@ using VcfService;
 
 namespace SecEdgar
 {
+
+//https://www.sec.gov/developer
+//https://sec-api.io/docs
+//Submissions by company and extracted XBRL data are available via RESTful APIs on data.sec.gov, offering JSON formatted data.
     public class Stock
     {
         private string _symbol;
@@ -16,6 +20,7 @@ namespace SecEdgar
         }
 
         public string find_cik()
+
         {
           
             string cik = "";
@@ -40,5 +45,11 @@ namespace SecEdgar
 
             return cik;
         }
+
+        public void get_filing()
+        {
+
+        }
     }
+    
 }
