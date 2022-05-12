@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -17,12 +19,22 @@ namespace SecEdgar
     {
         private int _id;
         private string _name;
+
+        private int _age;
+
         private List<Person> _friends;
 
         public int Id{
             set{_id =value;}
             get{ return _id;}
         }
+
+        
+        public int Age{
+            set{_age =value;}
+            get{ return _age;}
+        }
+
 
         public string Name{
             set{_name =value;}
@@ -88,7 +100,56 @@ namespace SecEdgar
             // var doc = web.Load(url);
             // string content = doc.GetElementbyId("rescontent").InnerText;
             // File.WriteAllText(@"C:\tmp\1.txt",content);
-            PersonTest();
+            //PersonTest();
+        //    Queue<string> numbers = new Queue<string>();
+        //     numbers.Enqueue("one");
+        //     numbers.Enqueue("two");
+        //     numbers.Enqueue("three");
+        //     numbers.Enqueue("three");
+        //     numbers.Enqueue("four");
+        //     numbers.Enqueue("five");
+
+        //     foreach( string number in numbers )
+        //     {
+        //         Console.WriteLine(number);
+        //     }
+
+        //     Console.WriteLine("\nDequeuing '{0}'", numbers.Dequeue());
+        //     Console.WriteLine("Peek at next item to dequeue: {0}",
+        //         numbers.Peek());
+        //     Console.WriteLine("Dequeuing '{0}'", numbers.Dequeue());
+
+        //     Console.WriteLine("\numbers.Contains(\"four\") = {0}", numbers.Contains("four"));
+
+        //     Queue<string> uniqueQueue = new Queue<string>(numbers.Distinct().ToArray<string>());
+        //     foreach(var s in uniqueQueue)
+        //         System.Console.WriteLine(s);
+            //queueCopy.Clear();
+
+            string teststring="tet";
+
+            System.Console.WriteLine( (String.IsNullOrEmpty(teststring) ) ?  "is null" : teststring);
+
+        }
+
+        public class Node{
+            public string name;
+            public Node[] children;
+        }
+
+        void testArray()
+        {
+             int[] arr1 = {1,4,5,8,10,3};
+            int[] arr2 = {5,7,9,1,3,0};
+            int[] commonArray = arr1.Intersect(arr2).ToArray();
+
+            ArrayList alist = new ArrayList();
+            alist.AddRange(commonArray);
+            alist.Sort();
+            foreach(var a in alist)
+            {
+                System.Console.WriteLine(a);
+          }
         }
 
         static async Task<string> DownloadUrl()
